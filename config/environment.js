@@ -27,6 +27,19 @@ module.exports = function(environment) {
     'script-src': "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com",
     'style-src': "'self' 'unsafe-inline'"
   };
+  
+  /*
+   * Google Analytics Via ember-metrics
+   */
+  ENV.metricsAdapters = [
+    {
+      name: 'GoogleAnalytics',
+      environments: ['all'],
+      config: {
+        id: 'UA-62263693-3'
+      }
+    } 
+  ];
 
   if (environment === 'test') {
     // Testem prefers this...
