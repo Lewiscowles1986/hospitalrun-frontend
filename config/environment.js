@@ -20,11 +20,11 @@ module.exports = function(environment) {
   };
 
   ENV.contentSecurityPolicy = {
-    'connect-src': "'self'",
+    'connect-src': "'self' www.google-analytics.com",
     'default-src': "'self'",
     'frame-src': "'self'",
-    'img-src': "'self' filesystem: data:",
-    'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+    'img-src': "'self' www.google-analytics.com filesystem: data:",
+    'script-src': "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com",
     'style-src': "'self' 'unsafe-inline'"
   };
 
